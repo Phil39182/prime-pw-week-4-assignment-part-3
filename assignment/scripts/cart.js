@@ -11,7 +11,6 @@ let basket = [];
 
 function addItem ( item ) {
     if ( isFull() ) {
-        console.log('your basket is full')
         return false ;
     }
     else{
@@ -63,3 +62,4 @@ function removeItem ( item ) {
             return false;
         }
 }
+
