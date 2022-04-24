@@ -54,5 +54,12 @@ function isFull () {
 }
 
 function removeItem ( item ) {
-    
+    let removeIndex = basket.indexOf(item);
+        if ( removeIndex >= 0 ) {
+            basket.splice( removeIndex, 1)
+            return true;
+        }
+        else {
+            return false;
+        }
 }
