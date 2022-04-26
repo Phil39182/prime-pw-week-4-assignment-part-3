@@ -52,14 +52,19 @@ function isFull () {
     }
 }
 
+console.log(`running isFull should see false ${isFull()}`);
+
 function removeItem ( item ) {
-    let removeIndex = basket.indexOf(item);
-        if ( removeIndex >= 0 ) {
-            basket.splice( removeIndex, 1)
-            return true;
+    let removeIndex = basket.indexOf(item);//sets removeIndex to index number of item entered
+        if ( removeIndex >= 0 ) { //indexOf will return -1 if item not found and this conditional won't run 
+            let removedItem = basket[removeIndex];//saves value of removedItem before deleted
+            basket.splice( removeIndex, 1) //removes item at value of removeIndex
+            return removedItem;
         }
         else {
-            return false;
+            return null;
         }
 }
+
+
 
